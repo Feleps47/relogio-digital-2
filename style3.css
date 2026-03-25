@@ -1,0 +1,212 @@
+nav.menu-lateral {
+    width: 60px;
+    height: 100vh;
+    background-color: #000;
+    padding: 40px 0;
+    box-shadow: 3px 0 0 #00ffcc;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+/* EXPANDIR */
+nav.menu-lateral:hover {
+    width: 220px;
+}
+
+/* BOTÃO */
+.button-expandir {
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.button-expandir i {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* LISTA */
+ul {
+    list-style: none;
+}
+
+/* ITENS */
+ul li.item-menu {
+    transition: 0.3s;
+}
+
+ul li.item-menu:hover {
+    background: #00ffcc;
+}
+
+/* LINK */
+ul li.item-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* ÍCONE */
+ul li.item-menu a .icon {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+/* TEXTO */
+ul li.item-menu a .txt-link {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* MOSTRA TEXTO QUANDO EXPANDE */
+nav.menu-lateral:hover .txt-link {
+    opacity: 1;
+}
+
+.relogio {
+    margin-left: 80px;
+}
+
+.icon i {
+    font-size: 22px;
+    color: white;
+}
+
+nav.menu-lateral {
+    width: 70px;              /* largura inicial */
+    height: 100vh;            /* altura total da tela */
+    background-color: #000;   
+    padding: 40px 0;          
+    box-shadow: 3px 0 0 #00ffcc;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;         /* esconde o texto antes de expandir */
+    transition: width 0.3s;   /* transição suave */
+}
+
+/* Expande o menu ao passar o mouse */
+nav.menu-lateral:hover {
+    width: 220px;
+}
+
+/* Botão expandir (opcional) */
+.button-expandir {
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.button-expandir i {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Lista e itens */
+.menu-lateral ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu-lateral li.item-menu {
+    transition: background 0.3s;
+}
+
+.menu-lateral li.item-menu:hover {
+    background: #00ffcc;
+}
+
+/* Links */
+.menu-lateral li.item-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+/* Ícones */
+.menu-lateral li.item-menu a .icon i {
+    font-size: 22px;
+    margin-right: 15px;
+    color: white;
+}
+
+/* Texto oculto inicialmente */
+.menu-lateral li.item-menu a .txt-link {
+    opacity: 0;
+    white-space: nowrap;       /* evita quebra de linha */
+    transition: opacity 0.3s;
+}
+
+/* Texto aparece quando o menu é expandido */
+nav.menu-lateral:hover li.item-menu a .txt-link {
+    opacity: 1;
+}
+
+ul li.ativo {
+    background: #00ffcc;
+}
+
+button.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    left: 40px;
+    padding: 10px 15px;
+    background: #504c4c;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* BOTÃO DARK MODE / LIGHT MODE */
+button.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    left: 80px;               /* deslocado para não sobrepor o menu lateral */
+    padding: 10px 15px;
+    background: #504c4c;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;            /* garante que fique acima de tudo */
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+body.dark-mode nav.menu-lateral {
+    background-color: #1a1a1a;
+    box-shadow: 3px 0 0 #00ffcc;
+}
+
+body.dark-mode .nav-bar {
+    background: rgba(30,30,30,0.9);
+}
+
+body.dark-mode button.dark-mode-toggle {
+    background: #f5f5f5;
+    color: #121212;
+}
+
+body.dark-mode ul li.item-menu a:hover {
+    background: #00ffcc;
+    color: #000;
+}
